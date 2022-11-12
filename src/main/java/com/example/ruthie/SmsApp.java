@@ -12,7 +12,7 @@ public class SmsApp {
     public static void main(String[] args) {
         get("/", (req, res) -> "Hello Web");
 
-        post("/sms", (req, res) -> {
+        post("/ruth", (req, res) -> {
             res.type("application/xml");
             String howdy = randomNote();
             Body body = new Body
@@ -46,13 +46,14 @@ public class SmsApp {
     }
 
     static String randomRuthie(){
-        int r = (int) (Math.random()*5);
+        int r = (int) (Math.random()*6);
         String ruthieURL = new String [] {
                 "http://mementocat.com/images/ruthies/01.jpg",
                 "http://mementocat.com/images/ruthies/02.jpg",
                 "http://mementocat.com/images/ruthies/03.jpg",
                 "http://mementocat.com/images/ruthies/04.jpg",
-                "http://mementocat.com/images/ruthies/05.jpg"
+                "http://mementocat.com/images/ruthies/05.jpg",
+                "http://mementocat.com/images/ruthies/06.jpg"
 
         }[r];
         return ruthieURL;
